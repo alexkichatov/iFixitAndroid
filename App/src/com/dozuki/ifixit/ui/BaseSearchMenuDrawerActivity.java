@@ -68,18 +68,6 @@ public class BaseSearchMenuDrawerActivity extends BaseMenuDrawerActivity {
          });
       }
 
-      // Trigger onOptionsItemSelected for the custom menu item because it doesn't
-      // happen automatically.
-      final MenuItem barcodeItem = menu.findItem(R.id.action_scan_barcode);
-      barcodeItem.getActionView().setOnClickListener(new OnClickListener() {
-         @Override
-         public void onClick(View view) {
-            onOptionsItemSelected(barcodeItem);
-         }
-      });
-
-      CheatSheet.setup(barcodeItem.getActionView(), R.string.slide_menu_barcode_scanner);
-
       return super.onCreateOptionsMenu(menu);
    }
 
